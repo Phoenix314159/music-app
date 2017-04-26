@@ -1,0 +1,17 @@
+.card-block{
+    width:10vw;
+    text-align: center;
+    padding-top: 3vh;
+}
+.card{
+    width:20vw;
+    margin-top:10vh;
+    margin-left: 40vw;
+    height: 47vh;
+    display:flex;
+    justify-content: center;
+
+}
+.text-center{
+    margin-top: 5vh;
+}

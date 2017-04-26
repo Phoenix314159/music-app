@@ -1,0 +1,29 @@
+nav{
+
+    width: 100vw;
+}
+.nav{
+    background-color: #8fcafe;
+}
+
+
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding-top: .5vh;
+}
+
+li {
+    font-size: 1.5em;
+    font-family: 'Press Start 2P', bold;
+    font-style: oblique;
+
+}
+li:hover{
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
+}
