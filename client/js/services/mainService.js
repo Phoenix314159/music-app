@@ -6,9 +6,10 @@ angular.module('music-app').service('mainService', function ($http) {
             url: serverUrl + '/api/login'
         })
     };
-    this.addUser = () => {
+    this.addUser = (firstname,lastname,avatar,username,password) => {
         return $http({
             method: 'POST',
+            data: {firstname:firstname,lastname:lastname,avatar:avatar,username:username,password:password},
             url: serverUrl + '/api/addnewuser'
         })
     }

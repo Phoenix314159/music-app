@@ -2,10 +2,11 @@ angular.module('music-app').component('daw', {
     templateUrl: './views/daw.html',
     controller: function () {
         let that = this;
-        that.boxShow = false;
-        that.showBox = function () {
-            that.boxShow = !that.boxShow;
-        }
+         that.boxShow = true;
+         that.show = function () {
+             console.log('yo');
+             that.boxShow = !that.boxShow;
+         }
         that.sine = new Wad({source: 'sine'})
         that.square = new Wad({source: 'square'})
         that.triangle = new Wad({source: 'triangle'})
@@ -19,7 +20,6 @@ angular.module('music-app').component('daw', {
 
         that.stop = function () {
             that.tripleOscillator.stop();
-
         }
 
 

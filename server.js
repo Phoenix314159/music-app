@@ -23,7 +23,7 @@ app.post('/api/addnewuser', mainCtrl.addNewUser);
 app.post('/api/addtrack', mainCtrl.addTrack);
 app.post('/api/addeffect', mainCtrl.addEffect);
 app.get('/api/geteffect', mainCtrl.getEffect);
-app.get('api/viktor', mainCtrl.getViktor)
+// app.get('api/viktor', mainCtrl.getViktor)
 app.listen(port, () => {
     console.log(`listening on port ${port}`)
 })

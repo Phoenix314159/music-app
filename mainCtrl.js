@@ -1,9 +1,9 @@
 const app = require('./server')
     , massive = require('massive')
-    , connString = "postgres://postgres:name@localhost/assessbox"
+    , connString = "postgres://postgres:name@localhost/loginApp"
     , massiveInstance = massive.connectSync({connectionString: connString})
-    , session = require('./server')
-    , viktor = require('./viktor');
+    , session = require('./server');
+    // , viktor = require('./viktor');
 
 app.set('db', massiveInstance);
 const db = app.get('db');
@@ -24,7 +24,7 @@ module.exports = {
     addNewUser: (req, res) => {
         db.add_new_user([req.body.firstname, req.body.lastname, req.body.avatar, req.body.username, req.body.password],
             (err, newUser) => {
-                !err ? res.status(200).json(newUser) : res.status(404).send(err);
+                !err ? res.status(200).send(newUser) : res.status(404).send(err);
 
             })
     },
@@ -43,7 +43,8 @@ module.exports = {
             !err ? res.status(200).json(effect) : res.status(404).send(err);
         })
     },
-    getViktor: (req, res) => {
-        res.status(200).send(viktor);
-    }
+    // getViktor: (req, res) => {
+    //     console.log('yo dude');
+    //     res.status(200).send(viktor);
+    // }
 }

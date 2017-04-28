@@ -26,6 +26,13 @@ angular.module('music-app', ['ui.router'])
                 template: '<synth></synth>',
                 component: 'synth'
             })
+            .state('groupPage', {
+                url: '/grouppage',
+                template: '<group-page></group-page>',
+                component: 'groupPage'
+            })
+
+
 
         $urlRouterProvider.otherwise('/');
 

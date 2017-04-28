@@ -1,3 +1,10 @@
 .box{
     height:5vh;
 }
+.tiles{
+    height: 7vh;
+    width: 20%;
+}
+home{
+    display: none;
+}

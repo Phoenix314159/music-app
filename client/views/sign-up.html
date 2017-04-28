@@ -15,6 +15,10 @@
                   <label for="form2">Last Name</label>
             </div>
             <div class="md-form">
+                  <input type="text" id="form5" class="form-control" ng-model="$ctrl.avatar">
+                  <label for="form2">Picture</label>
+            </div>
+            <div class="md-form">
                   <input type="text" id="form3" class="form-control" ng-model="$ctrl.username">
                   <label for="form2">Username</label>
             </div>
@@ -23,7 +27,7 @@
                   <label for="form4">Password</label>
             </div>
             <div class="text-center">
-                  <button class="btn btn-primary">Sign Up</button>
+                  <a ui-sref="home"><button class="btn btn-primary" ng-click="$ctrl.addNewUser(); $ctrl.congrats()">Sign Up</button></a>
             </div>
       </div>
 </div>
