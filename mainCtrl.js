@@ -43,8 +43,8 @@ module.exports = {
             !err ? res.status(200).json(effect) : res.status(404).send(err);
         })
     },
-    // getViktor: (req, res) => {
-    //     console.log('yo dude');
-    //     res.status(200).send(viktor);
-    // }
+    getViktor: (req, res) => {
+        console.log('yo dude');
+        res.status(200).send(viktor);
+    }
 }
