@@ -1,6 +1,6 @@
 const express = require('express')
     , bodyParser = require('body-parser')
-    , port = 3045
+    , port = 3055
     , path = require('path')
     , cookieParser = require('cookie-parser')
     , exphbs = require('express-handlebars')
@@ -15,7 +15,7 @@ const express = require('express')
     , config = require('./.config');
 
 let corsOptions = {
-    origin: 'http://localhost:3045'
+    origin: 'http://localhost:3055'
 }
 
 app.use(cors(corsOptions));
@@ -60,7 +60,8 @@ app.post('/api/addnewuser', mainCtrl.addNewUser);
 app.post('/api/addtrack', mainCtrl.addTrack);
 app.post('/api/addeffect', mainCtrl.addEffect);
 app.get('/api/geteffect', mainCtrl.getEffect);
-app.get('api/viktor', mainCtrl.getViktor)
+app.get('/api/viktor', mainCtrl.getViktor);
+// app.get('/api/daw', mainCtrl.getDaw);
 app.listen(port, () => {
     console.log(`listening on port ${port}`)
 })

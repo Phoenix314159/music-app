@@ -4,7 +4,7 @@ var http = require('http'),
 	pathUtils = require('path'),
 	express = require("express"),
 	app = express(),
-	PORT = process.env.PORT || 3100;
+	PORT = process.env.PORT || 3200;
 
 app.use( express.static( pathUtils.resolve( __dirname, "client" ) ) );
 

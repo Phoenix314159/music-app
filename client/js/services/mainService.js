@@ -14,9 +14,16 @@ angular.module('music-app').service('mainService', function ($http) {
         })
     }
     this.getSynth = () => {
+        console.log('yo man');
         return $http({
             method: 'GET',
-            url: serverUrl + 'api/viktor'
+            url: serverUrl + '/api/viktor'
+        })
+    }
+    this.getDaw = () => {
+        return $http({
+            method: 'GET',
+            url: serverUrl + '/api/daw'
         })
     }
 

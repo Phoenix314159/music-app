@@ -2,15 +2,16 @@ const app = require('./server')
     , massive = require('massive')
     , connString = "postgres://postgres:name@localhost/loginApp"
     , massiveInstance = massive.connectSync({connectionString: connString})
-    , session = require('./server');
-    // , viktor = require('./viktor');
+    , session = require('./server')
+     , viktor = require(__dirname + '/viktor');
+     // , daw = require('.\DAW');
 
 app.set('db', massiveInstance);
 const db = app.get('db');
 
 
 module.exports = {
-    login : function (req, res) {
+    login: function (req, res) {
         // for(let i=0; i<users.length; i++){
         //     if(req.body.name === users[i].name && req.body.password === users[i].password){
         //         req.session.currentUser = users[i];
@@ -44,7 +45,9 @@ module.exports = {
         })
     },
     getViktor: (req, res) => {
-        console.log('yo dude');
         res.status(200).send(viktor);
-    }
+    },
+    // getDaw: (req, res) => {
+    //     res.status(200).send(daw);
+    // }
 }
